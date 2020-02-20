@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.dao.SetmealDao">
+    <!--1:新增检查组:-->
+    <insert id="add" parameterType="cn.itcast.pojo.Setmeal">
+        <!--通过mybatis框架提供的selectKey标签获得自增产生的ID值-->
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            select LAST_INSERT_ID()
+        </selectKey>
+        insert into t_setmeal(code,name,sex,helpCode,remark,attention,age,price,img)
+        values
+        (#{code},#{name},#{sex},#{helpCode},#{remark},#{attention},#{age},#{price},#{img})
+    </insert>
+    <!--2:添加关联表中的Id-->
+    <insert id="setSetmealIdAndCheckgroupId" parameterType="map">
+        insert into t_setmeal_checkgroup(setmeal_id,checkgroup_id)
+            values (#{setmealId},#{checkgroupId});
+    </insert>
+
+    <!--3:分页查询-->
+    <select id="findByCondition" parameterType="String" resultType="cn.itcast.pojo.Setmeal">
+        select * from t_setmeal
+        <if test="value != null and value != '' and value.length > 0">
+            where code = #{value} or name = #{value} or helpCode = #{value}
+        </if>
+    </select>
+
+    <select id="findAll" resultType="cn.itcast.pojo.Setmeal">
+        select * from t_setmeal
+    </select>
+
+    <resultMap id="setmealMap" type="cn.itcast.pojo.Setmeal">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"/>
+        <result column="code" property="code"/>
+        <result column="helpCode" property="helpCode"/>
+        <result column="sex" property="sex"/>
+        <result column="age" property="age"/>
+        <result column="price" property="price"/>
+        <result column="remark" property="remark"/>
+        <result column="attention" property="attention"/>
+        <result column="img" property="img"/>
+
+    </resultMap>
+    <resultMap id="findcheckGroupByid" type="cn.itcast.pojo.Setmeal" extends="setmealMap">
+        <collection
+                property="checkGroups"
+                ofType="cn.itcast.pojo.CheckGroup"
+                select="cn.itcast.dao.CheckGroupDao.findCheckGroupById"
+                column="id"
+        >
+        </collection>
+    </resultMap>
+    
+    <select id="findById" parameterType="int" resultMap="findcheckGroupByid">
+        select * from t_setmeal where id = #{id}
+    </select>
+
+    <!--查询套餐表中的每个套餐预约的个数和套餐名称-->
+    <select id="findSetmealCount" resultType="map">
+        select s.name ,count(o.id) value from t_setmeal s ,t_order o where o.setmeal_id = s.id group by s.name
+    </select>
+</mapper>

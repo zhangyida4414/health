@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.dao.CheckGroupDao">
+    <!--1:新增检查组:-->
+    <insert id="add" parameterType="cn.itcast.pojo.CheckGroup">
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            select LAST_INSERT_ID()
+        </selectKey>
+        insert into t_checkgroup(code,name,sex,helpCode,remark,attention)
+              values
+        (#{code},#{name},#{sex},#{helpCode},#{remark},#{attention})
+    </insert>
+    <!--2:添加关联表中的Id-->
+    <insert id="setCheckgroupAndCheckitem" parameterType="map">
+        insert into t_checkgroup_checkitem (checkgroup_id,checkitem_id)
+            values (#{checkgroupId},#{checkitemId});
+    </insert>
+
+    <!--3:分页查询:-->
+    <select id="findPageByqueryString" parameterType="string" resultType="cn.itcast.pojo.CheckGroup">
+        select * from t_checkgroup
+        <if test="value != null and value != '' and value.length > 0 ">
+            where code =#{value} or name= #{value} or helpcode = #{value}
+        </if>
+    </select>
+
+    <!--4:通过id查询检查组:-->
+    <select id="findByid" parameterType="int" resultType="cn.itcast.pojo.CheckGroup">
+        select * from t_checkgroup where id = #{id}
+    </select>
+
+    <!--5:根据检查组的id查询检查项:-->
+    <select id="findcheckitemIdBygroupId" parameterType="int" resultType="int">
+        select checkitem_id from t_checkgroup_checkitem where checkgroup_id = #{id}
+    </select>
+
+    <!--6:编辑检查组:-->
+    <update id="edit" parameterType="cn.itcast.pojo.CheckGroup">
+        update t_checkgroup
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="code != null">
+                code = #{code},
+            </if>
+            <if test="helpCode != null">
+                helpCode = #{helpCode},
+            </if>
+            <if test="attention != null">
+                attention = #{attention},
+            </if>
+            <if test="remark != null">
+                remark = #{remark},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--7:删除关联关系:-->
+    <delete id="deleteAssocication" parameterType="int" >
+        delete from t_checkgroup_checkitem where checkgroup_id = #{id}
+    </delete>
+
+    <!--8:查询所有的检查组:-->
+    <select id="findAll" resultType="cn.itcast.pojo.CheckGroup">
+        select * from  t_checkgroup
+    </select>
+
+    <resultMap id="groupMap" type="cn.itcast.pojo.CheckGroup">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="code" property="code"/>
+        <result column="helpCode" property="helpCode"/>
+        <result column="sex" property="sex"/>
+        <result column="remark" property="remark"/>
+        <result column="attention" property="attention"/>
+    </resultMap>
+    <resultMap id="findCheckitemByid" type="cn.itcast.pojo.CheckGroup" extends="groupMap">
+        <collection
+                property="checkItems"
+                ofType="cn.itcast.pojo.CheckItem"
+                select="cn.itcast.dao.CheckItemDao.findCheckitemByid"
+                column="id">
+        </collection>
+    </resultMap>
+
+
+    <select id="findCheckGroupById" parameterType="int" resultMap="findCheckitemByid">
+        select * from t_checkgroup where id in (select checkgroup_id from t_setmeal_checkgroup where setmeal_id = #{setmeal_id})
+    </select>
+</mapper>

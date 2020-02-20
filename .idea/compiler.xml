@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="health_provider" />
+        <module name="itextjaspersoftDemo" />
+        <module name="spring_securityDemo" />
+        <module name="health_mobile" />
+        <module name="health_jobs" />
+        <module name="health_common" />
+        <module name="health_backend" />
+        <module name="health_interfaces" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring_security_Demo" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
