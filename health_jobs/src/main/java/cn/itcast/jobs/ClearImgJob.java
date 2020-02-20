@@ -18,7 +18,6 @@ public class ClearImgJob {
             for (String picName : set) {
                 //删除七牛云服务器上的图片:
                 QiniuUtils.deleteFileFromQiniu(picName);
-
                 //从Redis集合中删除图片的名称:
                 jedisPool.getResource().srem(RedisConstant.SETMEAL_PIC_RESOURCES,picName);
                 System.out.println("定时清理:"+picName);

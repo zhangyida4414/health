@@ -4,6 +4,10 @@
     <list default="true" id="c7e89602-ee17-402f-8a95-eed568c061eb" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/itextjaspersoftDemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/itextjaspersoftDemo/pom.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -86,6 +90,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -302,8 +311,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -526,7 +535,12 @@
       <workItem from="1582101845929" duration="7774000" />
       <workItem from="1582119999668" duration="274000" />
       <workItem from="1582167378299" duration="2370000" />
+<<<<<<< Updated upstream
       <workItem from="1582183685075" duration="771000" />
+=======
+      <workItem from="1582183685075" duration="1655000" />
+      <workItem from="1582185377324" duration="255000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -539,7 +553,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="265049000" />
+=======
+    <option name="totallyTimeSpent" value="266188000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -553,7 +571,11 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
+<<<<<<< Updated upstream
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4964539" visible="true" weight="0.27890056" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4964539" visible="true" weight="0.31689572" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" sideWeight="0.5035461" side_tool="true" weight="0.16976556" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -571,13 +593,18 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32978722" />
       <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.8294849" />
+=======
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.20533548" side_tool="true" weight="0.76554173" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.7946645" visible="true" weight="0.76554173" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="JRebel Executor" order="14" weight="0.6507092" />
-      <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.12853678" side_tool="true" weight="0.7039007" />
+      <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.20533548" side_tool="true" weight="0.76554173" />
       <window_info anchor="bottom" id="Messages" order="16" />
       <window_info anchor="bottom" id="Problems" order="17" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1009,6 +1036,19 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+=======
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/health_backend/src/main/webapp/pages/report_business.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1066">
