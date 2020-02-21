@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/health_jobs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health_mobile" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/health_provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../healthfighting/health/health_parent/health_jobs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../healthfighting/health/health_parent/health_mobile" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../spring_securityDemo" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

@@ -8,15 +8,22 @@
         <outputRelativeToContentRoot value="true" />
         <module name="health_provider" />
         <module name="itextjaspersoftDemo" />
+        <module name="health_backend" />
         <module name="spring_securityDemo" />
         <module name="health_mobile" />
         <module name="health_jobs" />
         <module name="health_common" />
-        <module name="health_backend" />
         <module name="health_interfaces" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="health_backend (1) (com.itheima)" target="1.8" />
+      <module name="health_common (1) (com.itheima)" target="1.8" />
+      <module name="health_interface" target="1.8" />
+      <module name="health_jobs (1) (com.itheima)" target="1.8" />
+      <module name="health_mobile (1) (com.itheima)" target="1.8" />
+      <module name="health_parent (1) (com.itheima)" target="1.8" />
+      <module name="health_service_provider" target="1.8" />
       <module name="spring_security_Demo" target="1.7" />
     </bytecodeTargetLevel>
   </component>

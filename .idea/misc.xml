@@ -7,6 +7,10 @@
     <file type="web" url="file://$PROJECT_DIR$/health_mobile" />
     <file type="web" url="file://$PROJECT_DIR$/health_provider" />
     <file type="web" url="file://$PROJECT_DIR$/spring_security_Demo" />
+    <file type="web" url="file://$PROJECT_DIR$/../healthfighting/health/health_parent/health_backend" />
+    <file type="web" url="file://$PROJECT_DIR$/../healthfighting/health/health_parent/health_jobs" />
+    <file type="web" url="file://$PROJECT_DIR$/../healthfighting/health/health_parent/health_mobile" />
+    <file type="web" url="file://$PROJECT_DIR$/../healthfighting/health/health_parent/health_service_provider" />
     <file type="web" url="file://$PROJECT_DIR$/../spring_securityDemo" />
   </component>
   <component name="JavaScriptSettings">
@@ -18,6 +22,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../spring_securityDemo/pom.xml" />
         <option value="$PROJECT_DIR$/itextjaspersoftDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/../healthfighting/health/health_parent/pom.xml" />
       </list>
     </option>
   </component>
